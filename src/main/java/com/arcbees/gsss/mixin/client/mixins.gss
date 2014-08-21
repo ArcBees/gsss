@@ -1,0 +1,295 @@
+@provide 'mixins';
+
+/**
+ * Border Radius
+ */
+
+@defmixin borderradius(TOP_RIGHT, BOTTOM_RIGHT, BOTTOM_LEFT, TOP_LEFT) {
+    -webkit-border-top-right-radius: TOP_RIGHT;
+    -webkit-border-bottom-right-radius: BOTTOM_RIGHT;
+    -webkit-border-bottom-left-radius: BOTTOM_LEFT;
+    -webkit-border-top-left-radius: TOP_LEFT;
+    -moz-border-radius-topright: TOP_RIGHT;
+    -moz-border-radius-bottomright: BOTTOM_RIGHT;
+    -moz-border-radius-bottomleft: BOTTOM_LEFT;
+    -moz-border-radius-topleft: TOP_LEFT;
+    border-top-right-radius: TOP_RIGHT;
+    border-bottom-right-radius: BOTTOM_RIGHT;
+    border-bottom-left-radius: BOTTOM_LEFT;
+    border-top-left-radius: TOP_LEFT;
+}
+
+@defmixin borderradius_t(TOP) {
+    -webkit-border-radius: TOP TOP 0 0;
+    -moz-border-radius: TOP TOP 0 0;
+    border-radius: TOP TOP 0 0;
+}
+
+@defmixin borderradius_b(BOTTOM) {
+    -webkit-border-radius: 0 0 BOTTOM BOTTOM;
+    -moz-border-right: 0 0 BOTTOM BOTTOM;
+    border-radius: 0 0 BOTTOM BOTTOM;
+}
+
+@defmixin borderradius_l(LEFT) {
+    -webkit-border-radius: LEFT 0 0 LEFT;
+    -moz-border-right: LEFT 0 0 LEFT;
+    border-radius: LEFT 0 0 LEFT;
+}
+
+@defmixin borderradius_r(RIGHT) {
+    -webkit-border-radius: 0 RIGHT RIGHT 0;
+    -moz-border-right: 0 RIGHT RIGHT 0;
+    border-radius: 0 RIGHT RIGHT 0;
+}
+
+@defmixin borderradius_tr(TOP_RIGHT) {
+    -webkit-border-top-right-radius: TOP_RIGHT;
+    -moz-border-radius-topright: TOP_RIGHT;
+    border-top-right-radius: TOP_RIGHT;
+}
+
+@defmixin borderradius_tl(TOP_LEFT) {
+    -webkit-border-top-right-radius: TOP_LEFT;
+    -moz-border-radius-topright: TOP_LEFT;
+    border-top-right-radius: TOP_LEFT;
+}
+
+@defmixin borderradius_br(BOTTOM_RIGHT) {
+    -webkit-border-top-right-radius: BOTTOM_RIGHT;
+    -moz-border-radius-topright: BOTTOM_RIGHT;
+    border-top-right-radius: BOTTOM_RIGHT;
+}
+
+@defmixin borderradius_bl(BOTTOM_LEFT) {
+    -webkit-border-top-right-radius: BOTTOM_LEFT;
+    -moz-border-radius-topright: BOTTOM_LEFT;
+    border-top-right-radius: BOTTOM_LEFT;
+}
+
+@defmixin rounded(SIZE) {
+    -webkit-border-radius: SIZE;
+    -moz-border-radius: SIZE;
+    border-radius: SIZE;
+}
+
+/**
+ * Box Sizing
+ */
+
+@defmixin boxsizing() {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/**
+ * Gradient
+ */
+
+@defmixin gradient(FIRST_COLOR, SECOND_COLOR) {
+    background: FIRST_COLOR; /* Old browsers */
+    /* @alternate */ background: -moz-linear-gradient(top, FIRST_COLOR 0%, SECOND_COLOR 100%); /* FF3.6+ */
+    /* @alternate */ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,FIRST_COLOR), color-stop(100%,SECOND_COLOR)); /* Chrome,Safari4+ */
+    /* @alternate */ background: -webkit-linear-gradient(top, FIRST_COLOR 0%,SECOND_COLOR 100%); /* Chrome10+,Safari5.1+ */
+    /* @alternate */ background: -o-linear-gradient(top, FIRST_COLOR 0%,SECOND_COLOR 100%); /* Opera 11.10+ */
+    /* @alternate */ background: -ms-linear-gradient(top, FIRST_COLOR 0%,SECOND_COLOR 100%); /* IE10+ */
+    /* @alternate */ background: linear-gradient(to bottom, FIRST_COLOR 0%,SECOND_COLOR 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='FIRST_COLOR', endColorstr='SECOND_COLOR',GradientType=0 ); /* IE6-9 */
+}
+
+@defmixin gradient_h(FIRST_COLOR, SECOND_COLOR) {
+    background: FIRST_COLOR; /* Old browsers */
+    /* @alternate */ background: -moz-linear-gradient(left, FIRST_COLOR 0%, SECOND_COLOR 100%); /* FF3.6+ */
+    /* @alternate */ background: -webkit-gradient(linear, left top, right top, color-stop(0%, FIRST_COLOR), color-stop(100%, SECOND_COLOR)); /* Chrome,Safari4+ */
+    /* @alternate */ background: -webkit-linear-gradient(left, FIRST_COLOR 0%, SECOND_COLOR 100%); /* Chrome10+,Safari5.1+ */
+    /* @alternate */ background: -o-linear-gradient(left, FIRST_COLOR 0%, SECOND_COLOR 100%); /* Opera 11.10+ */
+    /* @alternate */ background: -ms-linear-gradient(left, FIRST_COLOR 0%, SECOND_COLOR 100%); /* IE10+ */
+    /* @alternate */ background: linear-gradient(to right, FIRST_COLOR 0%, SECOND_COLOR 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='FIRST_COLOR', endColorstr='SECOND_COLOR', GradientType=1); /* IE6-8 */
+}
+
+@defmixin gradient_tlbr(FIRST_COLOR, SECOND_COLOR) {
+    background: FIRST_COLOR; /* Old browsers */
+    /* @alternate */ background: -moz-linear-gradient(-45deg, FIRST_COLOR 0%, SECOND_COLOR 100%); /* FF3.6+ */
+    /* @alternate */ background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, FIRST_COLOR), color-stop(100%, SECOND_COLOR)); /* Chrome,Safari4+ */
+    /* @alternate */ background: -webkit-linear-gradient(-45deg, FIRST_COLOR 0%, SECOND_COLOR 100%); /* Chrome10+,Safari5.1+ */
+    /* @alternate */ background: -o-linear-gradient(-45deg, FIRST_COLOR 0%, SECOND_COLOR 100%); /* Opera 11.10+ */
+    /* @alternate */ background: -ms-linear-gradient(-45deg, FIRST_COLOR 0%, SECOND_COLOR 100%); /* IE10+ */
+    /* @alternate */ background: linear-gradient(135deg, FIRST_COLOR 0%, SECOND_COLOR 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='FIRST_COLOR', endColorstr='SECOND_COLOR', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+}
+
+@defmixin gradient_bltr(FIRST_COLOR, SECOND_COLOR) {
+    background: FIRST_COLOR; /* Old browsers */
+    /* @alternate */ background: -moz-linear-gradient(45deg, FIRST_COLOR 0%, SECOND_COLOR 100%); /* FF3.6+ */
+    /* @alternate */ background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,FIRST_COLOR), color-stop(100%,SECOND_COLOR)); /* Chrome,Safari4+ */
+    /* @alternate */ background: -webkit-linear-gradient(45deg, FIRST_COLOR 0%,SECOND_COLOR 100%); /* Chrome10+,Safari5.1+ */
+    /* @alternate */ background: -o-linear-gradient(45deg, FIRST_COLOR 0%,SECOND_COLOR 100%); /* Opera 11.10+ */
+    /* @alternate */ background: -ms-linear-gradient(45deg, FIRST_COLOR 0%,SECOND_COLOR 100%); /* IE10+ */
+    /* @alternate */ background: linear-gradient(45deg, FIRST_COLOR 0%,SECOND_COLOR 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='FIRST_COLOR', endColorstr='SECOND_COLOR',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+@defmixin gradient_circular(INNER_COLOR, OUTER_COLOR) {
+    background: INNER_COLOR; /* Old browsers */
+    /* @alternate */ background: -moz-radial-gradient(center, ellipse cover, INNER_COLOR 0%, OUTER_COLOR 100%); /* FF3.6+ */
+    /* @alternate */ background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,INNER_COLOR), color-stop(100%,OUTER_COLOR)); /* Chrome,Safari4+ */
+    /* @alternate */ background: -webkit-radial-gradient(center, ellipse cover, INNER_COLOR 0%,OUTER_COLOR 100%); /* Chrome10+,Safari5.1+ */
+    /* @alternate */ background: -o-radial-gradient(center, ellipse cover, INNER_COLOR 0%,OUTER_COLOR 100%); /* Opera 12+ */
+    /* @alternate */ background: -ms-radial-gradient(center, ellipse cover, INNER_COLOR 0%,OUTER_COLOR 100%); /* IE10+ */
+    /* @alternate */ background: radial-gradient(ellipse at center, INNER_COLOR 0%,OUTER_COLOR 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='INNER_COLOR', endColorstr='OUTER_COLOR',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+/**
+ * Outline
+ */
+
+@defmixin outline(SIZE, BORDER, COLOR, OFFSET) {
+    outline: SIZE BORDER COLOR;
+    outline-offset: OFFSET;
+}
+
+/**
+ * Opacity
+ */
+
+@defmixin opacity(ALPHA) {
+    -webkit-opacity: ALPHA;
+    -khtml-opacity: ALPHA;
+    -moz-opacity: ALPHA;
+    opacity: ALPHA;
+}
+
+/**
+ * Shadow
+ */
+
+@defmixin shadow(HORIZONTAL, VERTICAL, BLUR, ALPHA) {
+    -webkit-box-shadow: HORIZONTAL VERTICAL BLUR rgba(0, 0, 0, ALPHA);
+    -moz-box-shadow: HORIZONTAL VERTICAL BLUR rgba(0, 0, 0, ALPHA);
+    box-shadow: HORIZONTAL VERTICAL BLUR rgba(0, 0, 0, ALPHA);
+}
+
+@defmixin shadow_color(HORIZONTAL, VERTICAL, BLUR, SPREAD, COLOR) {
+    -webkit-box-shadow: HORIZONTAL VERTICAL BLUR SPREAD COLOR;
+    -moz-box-shadow: HORIZONTAL VERTICAL BLUR SPREAD COLOR;
+    box-shadow: HORIZONTAL VERTICAL BLUR SPREAD COLOR;
+}
+
+@defmixin shadow_inner(HORIZONTAL, VERTICAL, BLUR, ALPHA) {
+    -webkit-box-shadow: inset HORIZONTAL VERTICAL BLUR rgba(0, 0, 0, ALPHA);
+    -moz-box-shadow: inset HORIZONTAL VERTICAL BLUR rgba(0, 0, 0, ALPHA);
+    box-shadow: inset HORIZONTAL VERTICAL BLUR rgba(0, 0, 0, ALPHA);
+}
+
+@defmixin shadow_inner_color(HORIZONTAL, VERTICAL, BLUR, SPREAD, COLOR) {
+    -webkit-box-shadow: inset HORIZONTAL VERTICAL BLUR SPREAD COLOR;
+    -moz-box-shadow: inset HORIZONTAL VERTICAL BLUR SPREAD COLOR;
+    box-shadow: inset HORIZONTAL VERTICAL BLUR SPREAD COLOR;
+}
+
+@defmixin shadow_text(HORIZONTAL, VERTICAL, BLUR, ALPHA) {
+    text-shadow: HORIZONTAL VERTICAL BLUR rgba(0, 0, 0, ALPHA);
+}
+
+@defmixin shadow_text_color(HORIZONTAL, VERTICAL, BLUR, COLOR) {
+    text-shadow: HORIZONTAL VERTICAL BLUR COLOR;
+}
+
+@defmixin shadow_none() {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+/**
+ * Transform
+ */
+
+@defmixin flip_horizontal() {
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+@defmixin flip_vertical() {
+    -webkit-transform: scaleY(-1);
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: FlipV;
+    -ms-filter: "FlipV";
+}
+
+@defmixin rotate(DEGREES) {
+    -webkit-transform: rotate(DEGREES);
+    -moz-transform: rotate(DEGREES);
+    -o-transform: rotate(DEGREES);
+    -ms-transform: rotate(DEGREES);
+    transform: rotate(DEGREES);
+}
+
+@defmixin rotate_180_cw() {
+    -webkit-transform: rotateZ(180deg);
+    -moz-transform: rotateZ(180deg);
+    -o-transform: rotateZ(180deg);
+    -ms-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+}
+
+@defmixin rotate_180_ccw() {
+    -webkit-transform: rotateZ(-180deg);
+    -moz-transform: rotateZ(-180deg);
+    -o-transform: rotateZ(-180deg);
+    -ms-transform: rotateZ(-180deg);
+    transform: rotateZ(-180deg);
+}
+
+@defmixin scale(RATIO_HORIZONTAL, RATIO_VERTICAL) {
+    -webkit-transform: scale(RATIO_HORIZONTAL, RATIO_VERTICAL);
+    -moz-transform: scale(RATIO_HORIZONTAL, RATIO_VERTICAL);
+    -o-transform: scale(RATIO_HORIZONTAL, RATIO_VERTICAL);
+    -ms-transform: scale(RATIO_HORIZONTAL, RATIO_VERTICAL);
+    transform: scale(RATIO_HORIZONTAL, RATIO_VERTICAL);
+}
+
+@defmixin translate(HORIZONTAL, VERTICAL) {
+    -webkit-transform: translate(HORIZONTAL, VERTICAL);
+    -moz-transform: translate(HORIZONTAL, VERTICAL);
+    -o-transform: translate(HORIZONTAL, VERTICAL);
+    -ms-transform: translate(HORIZONTAL, VERTICAL);
+    transform: translate(HORIZONTAL, VERTICAL);
+}
+
+/**
+ * Transition
+ */
+
+@defmixin transition(PROPERTY, DURATION) {
+    -webkit-transition: PROPERTY DURATION;
+    -moz-transition: PROPERTY DURATION;
+    -ms-transition: PROPERTY DURATION;
+    -o-transition: PROPERTY DURATION;
+    transition: PROPERTY DURATION;
+}
+
+@defmixin transition_effect(PROPERTY, DURATION, EFFECT) {
+    -webkit-transition: PROPERTY DURATION EFFECT;
+    -moz-transition: PROPERTY DURATION EFFECT;
+    -ms-transition: PROPERTY DURATION EFFECT;
+    -o-transition: PROPERTY DURATION EFFECT;
+    transition: PROPERTY DURATION EFFECT;
+}
+
+@defmixin transition_delay(PROPERTY, DURATION, EFFECT, DELAY) {
+    -webkit-transition: PROPERTY DURATION EFFECT DELAY;
+    -moz-transition: PROPERTY DURATION EFFECT DELAY;
+    -ms-transition: PROPERTY DURATION EFFECT DELAY;
+    -o-transition: PROPERTY DURATION EFFECT DELAY;
+    transition: PROPERTY DURATION EFFECT DELAY;
+}

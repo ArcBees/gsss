@@ -18,7 +18,16 @@
     <properties>
         <!-- client -->
         <gwt.version>2.6.1</gwt.version>
+        <gssresources.version>1.0-SNAPSHOT</gssresources.version>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>sonatype.snapshots</id>
+            <name>Sonatype snapshot repository</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </repository>
+    </repositories>
 
     <build>
         <resources>
@@ -38,6 +47,12 @@
             <artifactId>gwt-user</artifactId>
             <version>${gwt.version}</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.jdramaix</groupId>
+            <artifactId>gssresource</artifactId>
+            <version>${gssresources.version}</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>

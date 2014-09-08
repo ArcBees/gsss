@@ -93,6 +93,22 @@
         margin-left: 1%;
     }
 
+    .col_m_push_1_4, .col_t_push_1_4, .col_push_1_4  {
+        @mixin PUSH(1, MOBILE_MAX_COLUMNS);
+    }
+
+    .col_m_push_1_2, .col_t_push_1_2, .col_push_1_2  {
+        @mixin PUSH(2, MOBILE_MAX_COLUMNS);
+    }
+
+    .col_m_push_3_4, .col_t_push_3_4, .col_push_3_4  {
+        @mixin PUSH(3, MOBILE_MAX_COLUMNS);
+    }
+
+    .col_m_push_0, .col_t_push_0 {
+        margin-left: 0;
+    }
+
     .col_m_hide{
         display: none;
     }
@@ -155,8 +171,36 @@
         @mixin SPAN(8, TABLET_GUTTER, TABLET_PADDING, TABLET_MAX_COLUMNS);
     }
 
-    .col_t_push_1_4 {
+    .col_t_push_1_8 {
+        @mixin PUSH(1, TABLET_MAX_COLUMNS);
+    }
+
+    .col_t_push_1_4, .col_push_1_4 {
         @mixin PUSH(2, TABLET_MAX_COLUMNS);
+    }
+
+    .col_t_push_3_8, .col_push_1_3, .col_push_5_12 {
+        @mixin PUSH(3, TABLET_MAX_COLUMNS);
+    }
+
+    .col_t_push_1_2, .col_push_1_2 {
+        @mixin PUSH(4, TABLET_MAX_COLUMNS);
+    }
+
+    .col_t_push_5_8, .col_push_2_3, .col_push_7_12 {
+        @mixin PUSH(5, TABLET_MAX_COLUMNS);
+    }
+
+    .col_t_push_3_4, .col_push_3_4 {
+        @mixin PUSH(6, TABLET_MAX_COLUMNS);
+    }
+
+    .col_t_push_7_8 {
+        @mixin PUSH(7, TABLET_MAX_COLUMNS);
+    }
+
+    .col_t_push_0 {
+        margin-left: 0;
     }
 
     .col_t_hide{
@@ -241,8 +285,52 @@
         @mixin SPAN(12, DESKTOP_GUTTER, DESKTOP_PADDING, DESKTOP_MAX_COLUMNS);
     }
 
+    .col_push_1_12 {
+        @mixin PUSH(1, DESKTOP_MAX_COLUMNS);
+    }
+
+    .col_push_1_6 {
+        @mixin PUSH(2, DESKTOP_MAX_COLUMNS);
+    }
+
+    .col_push_1_4 {
+        @mixin PUSH(3, DESKTOP_MAX_COLUMNS);
+    }
+
     .col_push_1_3 {
         @mixin PUSH(4, DESKTOP_MAX_COLUMNS);
+    }
+
+    .col_push_5_12 {
+        @mixin PUSH(5, DESKTOP_MAX_COLUMNS);
+    }
+
+    .col_push_1_2 {
+        @mixin PUSH(6, DESKTOP_MAX_COLUMNS);
+    }
+
+    .col_push_7_12 {
+        @mixin PUSH(7, DESKTOP_MAX_COLUMNS);
+    }
+
+    .col_push_2_3 {
+        @mixin PUSH(8, DESKTOP_MAX_COLUMNS);
+    }
+
+    .col_push_3_4 {
+        @mixin PUSH(9, DESKTOP_MAX_COLUMNS);
+    }
+
+    .col_push_5_6 {
+        @mixin PUSH(10, DESKTOP_MAX_COLUMNS);
+    }
+
+    .col_push_11_12 {
+        @mixin PUSH(11, DESKTOP_MAX_COLUMNS);
+    }
+
+    .col_push_0 {
+        margin-left: 0;
     }
 
     .col_hide{

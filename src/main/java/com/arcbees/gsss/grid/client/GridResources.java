@@ -33,6 +33,7 @@ public interface GridResources extends ClientBundle {
         String col_m_push_1_4();
         String col_m_push_1_2();
         String col_m_push_3_4();
+        String col_m_push_0();
 
         String col_t_1_8();
         String col_t_1_4();
@@ -50,6 +51,7 @@ public interface GridResources extends ClientBundle {
         String col_t_push_5_8();
         String col_t_push_3_4();
         String col_t_push_7_8();
+        String col_t_push_0();
 
         String col_1_12();
         String col_1_6();
@@ -75,6 +77,7 @@ public interface GridResources extends ClientBundle {
         String col_push_3_4();
         String col_push_5_6();
         String col_push_11_12();
+        String col_push_0();
     }
 
     @Source("grid.gss")

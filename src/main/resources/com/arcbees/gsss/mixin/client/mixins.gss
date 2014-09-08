@@ -293,3 +293,14 @@
     -o-transition: PROPERTY DURATION EFFECT DELAY;
     transition: PROPERTY DURATION EFFECT DELAY;
 }
+
+/**
+ * Animation
+ */
+
+@defmixin animation_delay(DURATION) {
+    -webkit-animation-delay: DURATION;
+    -moz-animation-delay: DURATION;
+    -o-animation-delay: DURATION;
+    animation-delay: DURATION;
+}

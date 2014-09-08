@@ -105,6 +105,10 @@
         @mixin PUSH(3, MOBILE_MAX_COLUMNS);
     }
 
+    .col_m_push_0, .col_t_push_0 {
+        margin-left: 0;
+    }
+
     .col_m_hide{
         display: none;
     }
@@ -193,6 +197,10 @@
 
     .col_t_push_7_8 {
         @mixin PUSH(7, TABLET_MAX_COLUMNS);
+    }
+
+    .col_t_push_0 {
+        margin-left: 0;
     }
 
     .col_t_hide{
@@ -319,6 +327,10 @@
 
     .col_push_11_12 {
         @mixin PUSH(11, DESKTOP_MAX_COLUMNS);
+    }
+
+    .col_push_0 {
+        margin-left: 0;
     }
 
     .col_hide{

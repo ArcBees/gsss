@@ -106,7 +106,7 @@
     }
 
     .col_m_push_0, .col_t_push_0 {
-        margin-left: 0;
+        margin-left: 0 !important;
     }
 
     .col_m_hide{
@@ -200,7 +200,7 @@
     }
 
     .col_t_push_0 {
-        margin-left: 0;
+        margin-left: 0 !important;
     }
 
     .col_t_hide{
@@ -330,7 +330,7 @@
     }
 
     .col_push_0 {
-        margin-left: 0;
+        margin-left: 0 !important;
     }
 
     .col_hide{

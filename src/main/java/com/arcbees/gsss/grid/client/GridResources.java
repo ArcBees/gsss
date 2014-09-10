@@ -80,6 +80,6 @@ public interface GridResources extends ClientBundle {
         String col_push_0();
     }
 
-    @Source("grid.gss")
+    @Source({"gridsettings.gss", "grid.gss"})
     Grid grid();
 }

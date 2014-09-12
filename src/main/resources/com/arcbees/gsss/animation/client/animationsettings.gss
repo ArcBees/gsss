@@ -1,0 +1,6 @@
+@provide 'animationsettings';
+
+/* -- Settings --------------------------------------------- */
+
+@def DEFAULT_DURATION       1s;
+@def DEFAULT_DELAY          .25s;

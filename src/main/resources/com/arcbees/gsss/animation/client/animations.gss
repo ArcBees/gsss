@@ -20,6 +20,13 @@
     /* @alternate */ animation-duration: DURATION;
 }
 
+@defmixin animation_ease(TIMING_FUNCTION) {
+    -webkit-animation-timing-function: TIMING_FUNCTION;
+    -moz-animation-timing-function: TIMING_FUNCTION;
+    -o-animation-timing-function: TIMING_FUNCTION;
+    animation-timing-function: TIMING_FUNCTION;
+}
+
 @defmixin animation_infinite() {
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;

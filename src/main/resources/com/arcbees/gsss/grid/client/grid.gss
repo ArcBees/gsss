@@ -66,9 +66,7 @@
     }
 
     .col_m_full, .col_t_full, .col_full {
-        @mixin SPAN_FIRST();
-        width: 98%;
-        margin-left: 1%;
+        @mixin SPAN(4, MOBILE_GUTTER, MOBILE_PADDING, MOBILE_MAX_COLUMNS);
     }
 
     .col_m_push_1_4, .col_t_push_1_4, .col_push_1_4  {

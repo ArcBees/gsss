@@ -54,6 +54,11 @@
     @mixin animation_delay();
 }
 
+@defmixin animation_name(NAME) {
+    -webkit-animation-name: NAME;
+    animation-name: NAME;
+}
+
 /* -- Animations ---------------------------------------- */
 
 /* -> Bounce in -- */

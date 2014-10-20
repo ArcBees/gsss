@@ -52,7 +52,7 @@
             <groupId>com.github.jdramaix</groupId>
             <artifactId>gssresource</artifactId>
             <version>${gssresources.version}</version>
-            <scope>compile</scope>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>

@@ -240,7 +240,7 @@
     @mixin animation_spin();
 }
 
-/* -> Spin counter clockwise (rotate 360deg) -- */
+/* -> Spin counter clockwise (rotate -360deg) -- */
 
 @-webkit-keyframes spinCcw {
     from { -webkit-transform: rotate(0deg);}

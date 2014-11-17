@@ -242,21 +242,21 @@
 
 /* -> Spin counter clockwise (rotate -360deg) -- */
 
-@-webkit-keyframes spinCcw {
+@-webkit-keyframes spinCCW {
     from { -webkit-transform: rotate(0deg);}
     to { -webkit-transform: rotate(-360deg);}
 }
 
-@keyframes spinCcw {
+@keyframes spinCCW {
     from {transform:rotate(0deg);}
     to {transform:rotate(-360deg);}
 }
 
-@defmixin animation_spin_Ccw() {
+@defmixin animation_spin_ccw() {
     -webkit-animation-name: spinCw;
     animation-name: spinCcw;
 }
 
-.spinCcw {
-@mixin animation_spin_Ccw();
+.spinCCW {
+@mixin animation_spin_ccw();
 }

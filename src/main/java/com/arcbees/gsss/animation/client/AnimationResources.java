@@ -32,6 +32,8 @@ public interface AnimationResources extends ClientBundle {
         String bounceInDown();
 
         String spin();
+
+        String spinCCW();
     }
 
     @Source({"animationsettings.gss", "animations.gss"})

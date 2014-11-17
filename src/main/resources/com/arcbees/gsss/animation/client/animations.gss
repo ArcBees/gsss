@@ -235,12 +235,12 @@
 
 @-webkit-keyframes spin {
     from { -webkit-transform: rotate(0deg);}
-    to { -webkit-transform: rotate(-360deg);}
+    to { -webkit-transform: rotate(360deg);}
 }
 
 @keyframes spin {
     from {transform:rotate(0deg);}
-    to {transform:rotate(-360deg);}
+    to {transform:rotate(360deg);}
 }
 
 @defmixin animation_spin() {
@@ -250,4 +250,25 @@
 
 .spin {
     @mixin animation_spin();
+}
+
+/* -> Spin counter clockwise (rotate -360deg) -- */
+
+@-webkit-keyframes spinCCW {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(-360deg);}
+}
+
+@keyframes spinCCW {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(-360deg);}
+}
+
+@defmixin animation_spin_ccw() {
+    -webkit-animation-name: spinCCW;
+    animation-name: spinCCW;
+}
+
+.spinCCW {
+@mixin animation_spin_ccw();
 }

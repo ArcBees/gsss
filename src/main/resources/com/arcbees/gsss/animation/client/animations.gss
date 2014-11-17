@@ -253,8 +253,8 @@
 }
 
 @defmixin animation_spin_ccw() {
-    -webkit-animation-name: spinCw;
-    animation-name: spinCcw;
+    -webkit-animation-name: spinCCW;
+    animation-name: spinCCW;
 }
 
 .spinCCW {

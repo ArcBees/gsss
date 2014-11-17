@@ -33,7 +33,7 @@ public interface AnimationResources extends ClientBundle {
 
         String spin();
 
-        String spinCcw();
+        String spinCCW();
     }
 
     @Source({"animationsettings.gss", "animations.gss"})

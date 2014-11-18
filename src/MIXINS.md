@@ -2,9 +2,9 @@
 
 ## How to install
 
-Add `com/arcbees/gssplusplus/mixin/client/mixin.gss` and your Gss file path in a `@Source` annotation.
+Add `com/arcbees/gsss/mixin/client/mixin.gss` and your Gss file path in a `@Source` annotation.
 
-    @Source({"com/arcbees/gssplusplus/mixin/client/mixins.gss", "style.gss"})
+    @Source({"com/arcbees/gsss/mixin/client/mixins.gss", "style.gss"})
     public Style style();
     
 Add a `@require 'mixins';` at the beginning of your Gss file that uses the mixins. This will force the compiler to check at compile time that the source is well imported.

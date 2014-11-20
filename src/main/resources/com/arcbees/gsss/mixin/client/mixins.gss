@@ -50,21 +50,21 @@
 }
 
 @defmixin borderradius_tl(TOP_LEFT) {
-    -webkit-border-top-right-radius: TOP_LEFT;
-    -moz-border-radius-topright: TOP_LEFT;
-    border-top-right-radius: TOP_LEFT;
+    -webkit-border-top-left-radius: TOP_LEFT;
+    -moz-border-radius-topleft: TOP_LEFT;
+    border-top-left-radius: TOP_LEFT;
 }
 
 @defmixin borderradius_br(BOTTOM_RIGHT) {
-    -webkit-border-top-right-radius: BOTTOM_RIGHT;
-    -moz-border-radius-topright: BOTTOM_RIGHT;
-    border-top-right-radius: BOTTOM_RIGHT;
+    -webkit-border-bottom-right-radius: BOTTOM_RIGHT;
+    -moz-border-radius-bottomright: BOTTOM_RIGHT;
+    border-bottom-right-radius: BOTTOM_RIGHT;
 }
 
 @defmixin borderradius_bl(BOTTOM_LEFT) {
-    -webkit-border-top-right-radius: BOTTOM_LEFT;
-    -moz-border-radius-topright: BOTTOM_LEFT;
-    border-top-right-radius: BOTTOM_LEFT;
+    -webkit-border-bottom-left-radius: BOTTOM_LEFT;
+    -moz-border-radius-bottomleft: BOTTOM_LEFT;
+    border-bottom-left-radius: BOTTOM_LEFT;
 }
 
 @defmixin rounded(SIZE) {

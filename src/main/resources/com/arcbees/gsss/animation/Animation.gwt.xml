@@ -8,5 +8,4 @@
                                    value="progid:DXImageTransform.Microsoft.gradient" />
 
     <set-configuration-property name="CssResource.enableGss" value="true" />
-
 </module>

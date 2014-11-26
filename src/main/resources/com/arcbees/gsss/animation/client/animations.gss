@@ -1,4 +1,4 @@
-@require 'animationsettings';
+@require 'gsss-animation-settings';
 
 /* -- Init animation ------------------------------------ */
 

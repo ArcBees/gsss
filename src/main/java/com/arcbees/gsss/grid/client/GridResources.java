@@ -17,10 +17,10 @@
 package com.arcbees.gsss.grid.client;
 
 import com.google.gwt.resources.client.ClientBundle;
-import com.google.gwt.resources.client.GssResource;
+import com.google.gwt.resources.client.CssResource;
 
 public interface GridResources extends ClientBundle {
-    interface Grid extends GssResource {
+    interface Grid extends CssResource {
         String row();
         String col();
 

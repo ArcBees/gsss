@@ -1,4 +1,6 @@
-@require 'gridsettings';
+@provide 'gsss-grid';
+
+@require 'gsss-grid-settings';
 
 /**
  * GRID SYSTEM

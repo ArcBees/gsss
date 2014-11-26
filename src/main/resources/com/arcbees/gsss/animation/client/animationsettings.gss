@@ -1,4 +1,4 @@
-@provide 'animationsettings';
+@provide 'gsss-animation-settings';
 
 /* -- Settings --------------------------------------------- */
 

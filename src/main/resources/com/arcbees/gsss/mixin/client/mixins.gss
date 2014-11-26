@@ -1,4 +1,14 @@
-@provide 'mixins';
+@provide 'gsss-mixins';
+
+/**
+ * Background-clip
+ */
+
+@defmixin bgclip() {
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+}
 
 /**
  * Border Radius

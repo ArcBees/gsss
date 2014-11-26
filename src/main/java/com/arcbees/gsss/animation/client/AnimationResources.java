@@ -17,10 +17,10 @@
 package com.arcbees.gsss.animation.client;
 
 import com.google.gwt.resources.client.ClientBundle;
-import com.google.gwt.resources.client.GssResource;
+import com.google.gwt.resources.client.CssResource;
 
 public interface AnimationResources extends ClientBundle {
-    interface Animation extends GssResource {
+    interface Animation extends CssResource {
         String animation();
 
         String infinite();

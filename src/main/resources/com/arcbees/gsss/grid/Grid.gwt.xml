@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <module>
     <inherits name='com.google.gwt.user.User'/>
-    <inherits name="com.google.gwt.resources.GssResource"/>
+
+    <set-configuration-property name="CssResource.enableGss" value="true" />
 
     <source path='client'/>
 </module>

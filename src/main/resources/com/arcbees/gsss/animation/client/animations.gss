@@ -1,3 +1,5 @@
+@provide 'gsss-animation';
+
 @require 'gsss-animation-settings';
 
 /* -- Init animation ------------------------------------ */

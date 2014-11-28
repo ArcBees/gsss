@@ -2,238 +2,97 @@
 
 @require 'gsss-animation-settings';
 
-/* -- Init animation ------------------------------------ */
-
-@defmixin animation() {
-    -webkit-animation-duration: DEFAULT_DURATION;
-    animation-duration: DEFAULT_DURATION;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-}
-
+/* -- Animation -- */
 .animation {
     @mixin animation();
 }
 
-/* -> Options -- */
-
-@defmixin animation_speed(DURATION) {
-    /* @alternate */ -webkit-animation-duration: DURATION;
-    /* @alternate */ animation-duration: DURATION;
+@defmixin animation() {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 
-@defmixin animation_ease(TIMING_FUNCTION) {
+/* -- Animation name -- */
+@defmixin animation_name(NAME) {
+    -webkit-animation-name: NAME;
+    animation-name: NAME;
+}
+
+/* -- Animation delay -- */
+@defmixin animation_delay(DELAY) {
+    -webkit-animation-delay: DELAY;
+    -moz-animation-delay: DELAY;
+    -o-animation-delay: DELAY;
+    animation-delay: DELAY;
+}
+
+/* -- Animation direction -- */
+@defmixin animation_direction(DIRECTION) {
+    -webkit-animation-direction: DIRECTION;
+    -moz-animation-direction: DIRECTION;
+    -o-animation-direction: DIRECTION;
+    animation-direction: DIRECTION;
+}
+
+/* -- Animation duration -- */
+@defmixin animation_duration(DURATION) {
+    -webkit-animation-duration: DURATION;
+    -moz-animation-duration: DURATION;
+    -o-animation-duration: DURATION;
+    animation-duration: DURATION;
+}
+
+/* -- Animation fill mode -- */
+@defmixin animation_fill_mode(FILL_MODE) {
+    -webkit-animation-timing-function: FILL_MODE;
+    -moz-animation-timing-function: FILL_MODE;
+    -o-animation-timing-function: FILL_MODE;
+    animation-timing-function: FILL_MODE;
+}
+
+/* -- Animation iteration count -- */
+@defmixin animation_iteration_count(ITERATION_COUNT) {
+    -webkit-animation-iteration-count: ITERATION_COUNT;
+    -moz-animation-iteration-count: ITERATION_COUNT;
+    -o-animation-iteration-count: ITERATION_COUNT;
+    animation-iteration-count: ITERATION_COUNT;
+}
+
+/* -- Animation play state -- */
+@defmixin animation_play_state(PLAY_STATE) {
+    -webkit-animation-iteration-count: PLAY_STATE;
+    -moz-animation-iteration-count: PLAY_STATE;
+    -o-animation-iteration-count: PLAY_STATE;
+    animation-iteration-count: PLAY_STATE;
+}
+
+/* -- Animation timing function -- */
+@defmixin animation_timing_function(TIMING_FUNCTION) {
     -webkit-animation-timing-function: TIMING_FUNCTION;
     -moz-animation-timing-function: TIMING_FUNCTION;
     -o-animation-timing-function: TIMING_FUNCTION;
     animation-timing-function: TIMING_FUNCTION;
 }
 
-@defmixin animation_infinite() {
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-}
-
+/* -- Animation loop -- */
 .infinite {
     @mixin animation_infinite();
 }
 
-@defmixin animation_delay() {
-    -webkit-animation-delay: DEFAULT_DELAY;
-    -moz-animation-delay: DEFAULT_DELAY;
-    -o-animation-delay: DEFAULT_DELAY;
-    animation-delay: DEFAULT_DELAY;
+@defmixin animation_infinite() {
+    @mixin animation_iteration_count(infinite);
 }
 
-@defmixin animation_delay_speed(DURATION) {
-    -webkit-animation-delay: DURATION;
-    -moz-animation-delay: DURATION;
-    -o-animation-delay: DURATION;
-    animation-delay: DURATION;
+/* -- Spin (rotate 360deg) -- */
+.spin {
+    @mixin animation_spin();
 }
 
-.delay {
-    @mixin animation_delay();
+@defmixin animation_spin() {
+    @mixin animation_name(spin);
 }
-
-@defmixin animation_name(NAME) {
-    -webkit-animation-name: NAME;
-    animation-name: NAME;
-}
-
-/* -- Animations ---------------------------------------- */
-
-/* -> Bounce in -- */
-
-@-webkit-keyframes bounceIn {
-    0%, 20%, 40%, 60%, 80%, 100% {
-        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    }
-
-    0% {
-        opacity: 0;
-        -webkit-transform: scale3d(.3, .3, .3);
-        transform: scale3d(.3, .3, .3);
-    }
-
-    20% {
-        -webkit-transform: scale3d(1.1, 1.1, 1.1);
-        transform: scale3d(1.1, 1.1, 1.1);
-    }
-
-    40% {
-        -webkit-transform: scale3d(.9, .9, .9);
-        transform: scale3d(.9, .9, .9);
-    }
-
-    60% {
-        opacity: 1;
-        -webkit-transform: scale3d(1.03, 1.03, 1.03);
-        transform: scale3d(1.03, 1.03, 1.03);
-    }
-
-    80% {
-        -webkit-transform: scale3d(.97, .97, .97);
-        transform: scale3d(.97, .97, .97);
-    }
-
-    100% {
-        opacity: 1;
-        -webkit-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
-    }
-}
-
-@keyframes bounceIn {
-    0%, 20%, 40%, 60%, 80%, 100% {
-        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    }
-
-    0% {
-        opacity: 0;
-        -webkit-transform: scale3d(.3, .3, .3);
-        transform: scale3d(.3, .3, .3);
-    }
-
-    20% {
-        -webkit-transform: scale3d(1.1, 1.1, 1.1);
-        transform: scale3d(1.1, 1.1, 1.1);
-    }
-
-    40% {
-        -webkit-transform: scale3d(.9, .9, .9);
-        transform: scale3d(.9, .9, .9);
-    }
-
-    60% {
-        opacity: 1;
-        -webkit-transform: scale3d(1.03, 1.03, 1.03);
-        transform: scale3d(1.03, 1.03, 1.03);
-    }
-
-    80% {
-        -webkit-transform: scale3d(.97, .97, .97);
-        transform: scale3d(.97, .97, .97);
-    }
-
-    100% {
-        opacity: 1;
-        -webkit-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
-    }
-}
-
-@defmixin animation_bounce_in() {
-    -webkit-animation-name: bounceIn;
-    animation-name: bounceIn;
-}
-
-.bounceIn {
-    @mixin animation_bounce_in();
-}
-
-/* -> Bounce In Down -- */
-
-@-webkit-keyframes bounceInDown {
-    0%, 60%, 75%, 90%, 100% {
-        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    }
-
-    0% {
-        opacity: 0;
-        -webkit-transform: translate3d(0, -3000px, 0);
-        transform: translate3d(0, -3000px, 0);
-    }
-
-    60% {
-        opacity: 1;
-        -webkit-transform: translate3d(0, 25px, 0);
-        transform: translate3d(0, 25px, 0);
-    }
-
-    75% {
-        -webkit-transform: translate3d(0, -10px, 0);
-        transform: translate3d(0, -10px, 0);
-    }
-
-    90% {
-        -webkit-transform: translate3d(0, 5px, 0);
-        transform: translate3d(0, 5px, 0);
-    }
-
-    100% {
-        -webkit-transform: none;
-        transform: none;
-    }
-}
-
-@keyframes bounceInDown {
-    0%, 60%, 75%, 90%, 100% {
-        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    }
-
-    0% {
-        opacity: 0;
-        -webkit-transform: translate3d(0, -3000px, 0);
-        transform: translate3d(0, -3000px, 0);
-    }
-
-    60% {
-        opacity: 1;
-        -webkit-transform: translate3d(0, 25px, 0);
-        transform: translate3d(0, 25px, 0);
-    }
-
-    75% {
-        -webkit-transform: translate3d(0, -10px, 0);
-        transform: translate3d(0, -10px, 0);
-    }
-
-    90% {
-        -webkit-transform: translate3d(0, 5px, 0);
-        transform: translate3d(0, 5px, 0);
-    }
-
-    100% {
-        -webkit-transform: none;
-        transform: none;
-    }
-}
-
-@defmixin animation_bounce_in_down() {
-    -webkit-animation-name: bounceInDown;
-    animation-name: bounceInDown;
-}
-
-.bounceInDown {
-    @mixin animation_bounce_in_down();
-}
-
-/* -> Spin (rotate 360deg) -- */
 
 @-webkit-keyframes spin {
     from { -webkit-transform: rotate(0deg);}
@@ -245,16 +104,14 @@
     to {transform:rotate(360deg);}
 }
 
-@defmixin animation_spin() {
-    -webkit-animation-name: spin;
-    animation-name: spin;
+/* -- Spin counter clockwise (rotate -360deg) -- */
+.spinCCW {
+    @mixin animation_spin_ccw();
 }
 
-.spin {
-    @mixin animation_spin();
+@defmixin animation_spin_ccw() {
+    @mixin animation_name(spinCCW);
 }
-
-/* -> Spin counter clockwise (rotate -360deg) -- */
 
 @-webkit-keyframes spinCCW {
     from { -webkit-transform: rotate(0deg);}
@@ -266,11 +123,577 @@
     to {transform:rotate(-360deg);}
 }
 
-@defmixin animation_spin_ccw() {
-    -webkit-animation-name: spinCCW;
-    animation-name: spinCCW;
+/* -- Bounce in -- */
+.bounceIn {
+    @mixin animation_bounce_in();
 }
 
-.spinCCW {
-@mixin animation_spin_ccw();
+@defmixin animation_bounce_in() {
+    @mixin animation_name(bounceIn);
+}
+
+@-webkit-keyframes bounceIn {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+    }
+
+    20% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    40% {
+        -webkit-transform: scale3d(.9, .9, .9);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    }
+
+    80% {
+        -webkit-transform: scale3d(.97, .97, .97);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes bounceIn {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    0% {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    40% {
+        transform: scale3d(.9, .9, .9);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+
+    80% {
+        transform: scale3d(.97, .97, .97);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+/* -- Bounce in -- */
+.bounceOut {
+    @mixin animation_bounce_out();
+}
+
+@defmixin animation_bounce_out() {
+    @mixin animation_name(bounceOut);
+}
+
+@-webkit-keyframes bounceOut {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        -webkit-transition-timing-function: cubic-bezier(1.000, 0.355, 0.610, 0.215);
+    }
+
+    0% {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+    }
+
+    20% {
+        -webkit-transform: scale3d(.97, .97, .97);
+    }
+
+    40% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    }
+
+    60% {
+        -webkit-transform: scale3d(.9, .9, .9);
+    }
+
+    80% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+    }
+}
+
+@keyframes bounceOut {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        transition-timing-function: cubic-bezier(1.000, 0.355, 0.610, 0.215);
+    }
+
+    0% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+
+    20% {
+        transform: scale3d(.97, .97, .97);
+    }
+
+    40% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+
+    60% {
+        transform: scale3d(.9, .9, .9);
+    }
+
+    80% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+}
+
+/* -- Zoom in -- */
+.zoomIn {
+    @mixin animation_zoom_in();
+}
+
+@defmixin animation_zoom_in() {
+    @mixin animation_name(zoomIn);
+}
+
+@-webkit-keyframes zoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+/* -- Zoom out -- */
+.zoomOut {
+    @mixin animation_zoom_out();
+}
+
+@defmixin animation_zoom_out() {
+    @mixin animation_name(zoomOut);
+}
+
+@-webkit-keyframes zoomOut {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes zoomOut {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* -- Fade in -- */
+.fadeIn {
+    @mixin animation_fade_in();
+}
+
+@defmixin animation_fade_in() {
+    @mixin animation_name(fadeIn);
+    @mixin animation_timing_function(ease-in-out);
+    visibility: visible !important;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: scale(0);
+        opacity: 0.0;
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    80% {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        -webkit-transform: scale(0);
+        opacity: 0.0;
+    }
+    60% {
+        -webkit-transform: scale(1.1);
+    }
+    80% {
+        -webkit-transform: scale(0.9);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* -- Pulse -- */
+.pulse {
+    @mixin animation_pulse();
+}
+
+@defmixin animation_pulse() {
+    @mixin animation_name(pulse);
+}
+
+@-webkit-keyframes pulse {
+    0%, 100% {
+        opacity: 0.7;
+        -webkit-transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        -webkit-transform: scale(1.05);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+}
+
+/* -- Slide in up -- */
+.slideInUp {
+    @mixin animation_slide_in_up();
+}
+
+@defmixin animation_slide_in_up() {
+    @mixin animation_name(slideInUp);
+}
+
+@-webkit-keyframes slideInUp {
+    0% {
+        -webkit-transform: translateY(900%);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    0% {
+        transform: translateY(900%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* -- Slide in down -- */
+.slideInDown {
+    @mixin animation_slide_in_down();
+}
+
+@defmixin animation_slide_in_down() {
+    @mixin animation_name(slideInDown);
+}
+
+@-webkit-keyframes slideInDown {
+    0% {
+        -webkit-transform: translateY(-900%);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-900%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* -- Slide in down pulse -- */
+.slideInDownPulse {
+    @mixin animation_slide_in_down_pulse();
+}
+
+@defmixin animation_slide_in_down_pulse() {
+    @mixin animation_name(slideInDownPulse);
+}
+
+@-webkit-keyframes slideInDownPulse {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(1, 1) translateY(-900%);
+    }
+
+    50%, 70%, 90% {
+        opacity: 1;
+        -webkit-transform: scale(1.1, 1.1) translateY(0);
+    }
+
+    60%, 80%, 100% {
+        opacity: 1;
+        -webkit-transform: scale(1, 1) translateY(0);
+    }
+}
+
+@keyframes slideInDownPulse {
+    0% {
+        opacity: 0;
+        transform: scale(1, 1) translateY(-900%);
+    }
+
+    50%, 70%, 90% {
+        opacity: 1;
+        transform: scale(1.1, 1.1) translateY(0);
+    }
+
+    60%, 80%, 100% {
+        opacity: 1;
+        transform: scale(1, 1) translateY(0);
+    }
+}
+
+/* -- Slide in up pulse -- */
+.slideInUpPulse {
+    @mixin animation_slide_in_up_pulse();
+}
+
+@defmixin animation_slide_in_up_pulse() {
+    @mixin animation_name(slideInUpPulse);
+}
+
+@-webkit-keyframes slideInUpPulse {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(1, 1) translateY(900%);
+    }
+
+    50%, 70%, 90% {
+        opacity: 1;
+        -webkit-transform: scale(1.1, 1.1) translateY(0);
+    }
+
+    60%, 80%, 100% {
+        opacity: 1;
+        -webkit-transform: scale(1, 1) translateY(0);
+    }
+}
+
+@keyframes slideInUpPulse {
+    0% {
+        opacity: 0;
+        transform: scale(1, 1) translateY(900%);
+    }
+
+    50%, 70%, 90% {
+        opacity: 1;
+        transform: scale(1.1, 1.1) translateY(0);
+    }
+
+    60%, 80%, 100% {
+        opacity: 1;
+        transform: scale(1, 1) translateY(0);
+    }
+}
+
+/* -- Slide in down bounce -- */
+.slideInDownBounce {
+    @mixin animation_slide_in_down_bounce();
+}
+
+@defmixin animation_slide_in_down_bounce() {
+    -webkit-animation-name: slideInDownBounce;
+    animation-name: slideInDownBounce;
+}
+
+@-webkit-keyframes slideInDownBounce {
+    0%, 60%, 75%, 90%, 100% {
+        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -3000px, 0);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 25px, 0);
+    }
+
+    75% {
+        -webkit-transform: translate3d(0, -10px, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, 5px, 0);
+    }
+
+    100% {
+        -webkit-transform: none;
+    }
+}
+
+@keyframes slideInDownBounce {
+    0%, 60%, 75%, 90%, 100% {
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -3000px, 0);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate3d(0, 25px, 0);
+    }
+
+    75% {
+        transform: translate3d(0, -10px, 0);
+    }
+
+    90% {
+        transform: translate3d(0, 5px, 0);
+    }
+
+    100% {
+        transform: none;
+    }
+}
+
+/* -- Slide in up bounce -- */
+.slideInUpBounce {
+    @mixin animation_slide_in_up_bounce();
+}
+
+@defmixin animation_slide_in_up_bounce() {
+    -webkit-animation-name: slideInUpBounce;
+    animation-name: slideInUpBounce;
+}
+
+@-webkit-keyframes slideInUpBounce {
+    0%, 60%, 75%, 90%, 100% {
+        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 3000px, 0);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 25px, 0);
+    }
+
+    75% {
+        -webkit-transform: translate3d(0, -10px, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, 5px, 0);
+    }
+
+    100% {
+        -webkit-transform: none;
+    }
+}
+
+@keyframes slideInUpBounce {
+    0%, 60%, 75%, 90%, 100% {
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 3000px, 0);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate3d(0, 25px, 0);
+    }
+
+    75% {
+        transform: translate3d(0, -10px, 0);
+    }
+
+    90% {
+        transform: translate3d(0, 5px, 0);
+    }
+
+    100% {
+        transform: none;
+    }
 }

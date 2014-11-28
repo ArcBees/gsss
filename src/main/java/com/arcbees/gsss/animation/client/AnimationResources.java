@@ -25,15 +25,33 @@ public interface AnimationResources extends ClientBundle {
 
         String infinite();
 
-        String delay();
-
-        String bounceIn();
-
-        String bounceInDown();
-
         String spin();
 
         String spinCCW();
+
+        String bounceIn();
+
+        String bounceOut();
+
+        String zoomIn();
+
+        String zoomOut();
+
+        String fadeIn();
+
+        String pulse();
+
+        String slideInUp();
+
+        String slideInDown();
+
+        String slideInDownPulse();
+
+        String slideInUpPulse();
+
+        String slideInDownBounce();
+
+        String slideInUpBounce();
     }
 
     @Source({"animationsettings.gss", "animations.gss"})

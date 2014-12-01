@@ -39,6 +39,8 @@ public interface AnimationResources extends ClientBundle {
 
         String fadeIn();
 
+        String fadeOut();
+
         String pulse();
 
         String slideInUp();
@@ -52,6 +54,10 @@ public interface AnimationResources extends ClientBundle {
         String slideInDownBounce();
 
         String slideInUpBounce();
+
+        String slideOutUpBounce();
+
+        String slideOutDownBounce();
     }
 
     @Source({"animationsettings.gss", "animations.gss"})

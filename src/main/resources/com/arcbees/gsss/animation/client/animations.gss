@@ -11,8 +11,8 @@
 }
 
 @defmixin animation() {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
+    -webkit-animation-duration: DEFAULT_DURATION;
+    animation-duration: DEFAULT_DURATION;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }

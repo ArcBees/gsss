@@ -20,6 +20,8 @@
 /* -- Animation name -- */
 @defmixin animation_name(NAME) {
     -webkit-animation-name: NAME;
+    -moz-animation-name: NAME;
+    -o-animation-name: NAME;
     animation-name: NAME;
 }
 
@@ -49,10 +51,10 @@
 
 /* -- Animation fill mode -- */
 @defmixin animation_fill_mode(FILL_MODE) {
-    -webkit-animation-timing-function: FILL_MODE;
-    -moz-animation-timing-function: FILL_MODE;
-    -o-animation-timing-function: FILL_MODE;
-    animation-timing-function: FILL_MODE;
+    -webkit-animation-fill-mode: FILL_MODE;
+    -moz-animation-fill-mode: FILL_MODE;
+    -o-animation-fill-mode: FILL_MODE;
+    animation-fill-mode: FILL_MODE;
 }
 
 /* -- Animation iteration count -- */
@@ -65,10 +67,10 @@
 
 /* -- Animation play state -- */
 @defmixin animation_play_state(PLAY_STATE) {
-    -webkit-animation-iteration-count: PLAY_STATE;
-    -moz-animation-iteration-count: PLAY_STATE;
-    -o-animation-iteration-count: PLAY_STATE;
-    animation-iteration-count: PLAY_STATE;
+    -webkit-animation-play-state: PLAY_STATE;
+    -moz-animation-play-state: PLAY_STATE;
+    -o-animation-play-state: PLAY_STATE;
+    animation-play-state: PLAY_STATE;
 }
 
 /* -- Animation timing function -- */

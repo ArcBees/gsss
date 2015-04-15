@@ -218,6 +218,13 @@
  * Transform
  */
 
+@defmixin transform(TRANSFORMATION) {
+    -moz-transform: TRANSFORMATION;  
+    -ms-transform: TRANSFORMATION;  
+    -o-transform: TRANSFORMATION;  
+    transform: TRANSFORMATION;
+}
+
 @defmixin flip_horizontal() {
     -webkit-transform: scaleX(-1);
     -moz-transform: scaleX(-1);

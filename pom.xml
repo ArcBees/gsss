@@ -10,7 +10,7 @@
 
     <groupId>com.arcbees.gss</groupId>
     <artifactId>gsss</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.1</version>
     <name>GSS on Steroids</name>
 
     <properties>
@@ -35,7 +35,7 @@
         <connection>scm:git:git@github.com:ArcBees/gsss.git</connection>
         <developerConnection>scm:git:git@github.com:ArcBees/gsss.git</developerConnection>
         <url>https://github.com/ArcBees/gsss</url>
-      <tag>HEAD</tag>
+      <tag>gsss-1.1</tag>
   </scm>
 
     <build>
